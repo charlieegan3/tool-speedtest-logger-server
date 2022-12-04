@@ -60,6 +60,7 @@ func (s *SpeedtestLogger) DatabaseSet(db *sql.DB) {
 }
 
 func (s *SpeedtestLogger) HTTPPath() string { return "speedtest-logger" }
+func (s *SpeedtestLogger) HTTPHost() string { return "" }
 func (s *SpeedtestLogger) HTTPAttach(router *mux.Router) error {
 	router.HandleFunc(
 		"/report",
